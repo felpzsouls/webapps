@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, 
+      #ff0000 0%,    /* Vermelho */
+      #ff7f00 14.28%, /* Laranja */
+      #ffff00 28.57%, /* Amarelo */
+      #00ff00 42.85%, /* Verde */
+      #0000ff 57.14%, /* Azul */
+      #4b0082 71.42%, /* Índigo */
+      #9400d3 85.71%  /* Violeta */
+    );
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    display: flex;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    background-color: antiquewhite;
+    margin-right: 12px;
+    border-radius: 15px;
+    width: 210px;
+    border: 5px solid;
+    border-color: rgb(196, 36, 218);
+}
+
+.box {
+    background-color: antiquewhite;
+    margin-right: 12px;
+    border-radius: 15px;
+    width: 320px;
+    border: 5px solid;
+    border-color: rgb(196, 36, 218);
+}
+
+
+.date {
+    display: flex;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    margin-bottom: 15px;
+}   
+
+span {
+    font-size: 60px;
+}
+
+.relogio h1,
+.relogio span {
+    margin: 0;
+}

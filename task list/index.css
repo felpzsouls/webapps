@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #232323;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #0000ff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.lista {
+    padding: 20px; 
+    max-height: 150px;
+    max-width: 250px;
+    overflow-x: auto;
+}
+
+.text {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#tasklist {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task {
+    width: 80%;
+}
+
+.task-item {
+    margin-bottom: 10px;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
