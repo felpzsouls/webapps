@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: lato, sans-serif, Arial;
+    font-size: 10px;  /* 1rem = 10px */
+    min-height: 100vh;
+}
+body {
+    background: linear-gradient(45deg, #16ebc4, #247061, #313132);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 30rem;
+    height: 35rem;
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgba(0,0,0,0.4);
+    padding: 2rem;
+}
+.timer-box {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.timer {
+    font-size: 4rem;
+    font-weight: lighter;
+}
+.btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+}
+.btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 4rem;
+}
+.btn-svg {
+    width: 4rem;
+}
+#btn-play{
+    display: block;
+}
+#btn-pause{
+    display: none;
+}
+/*
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+*/
