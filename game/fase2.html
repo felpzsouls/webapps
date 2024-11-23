@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 2 - Wordle</title>
+    <link rel="stylesheet" href="css/fase2.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Fase 2: Wordle</h1>
+        <button id="helpButton">?</button>
+        <div id="wordleBoard"></div>
+        <input type="text" id="wordInput" maxlength="5" />
+        <button id="submitWord">Enviar</button>
+        <p id="message"></p>
+    </div>
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Como jogar Wordle</h2>
+            <p>O objetivo do jogo é adivinhar uma palavra de 5 letras. Você tem várias tentativas, e após cada tentativa:</p>
+            <ul>
+                <li><b style="color: green;">Verde:</b> A letra está correta e na posição certa.</li>
+                <li><b style="color: yellow;">Amarelo:</b> A letra está na palavra, mas em outra posição.</li>
+                <li><b style="color: grey;">Cinza:</b> A letra não está na palavra.</li>
+            </ul>
+            <p>Dica: Use sua lógica para descobrir a palavra correta em menos tentativas!</p>
+        </div>
+    </div>
+    <script src="script/fase2.js"></script>
+    <script src="script/help.js"></script>
+</body>
+</html>

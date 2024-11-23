@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.jogo-forca {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#palavra-display {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+#tentativas {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#mensagem {
+    font-size: 1.1rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#letras-usadas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#letras-usadas span.certa {
+    color: green;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#letras-usadas span.errada {
+    color: red;
+    font-weight: bold;
+    margin-right: 5px;
+}

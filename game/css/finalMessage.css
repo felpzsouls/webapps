@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#menu {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#wordDisplay {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#wordDisplay span {
+    display: inline-block;
+    width: 20px;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+
+#wordDisplay span.space {
+    border-bottom: none; /* Remove a linha sublinhada para espaços */
+}
+
+#hiddenInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#messageOutput {
+    font-size: 1.2rem;
+    color: green;
+}

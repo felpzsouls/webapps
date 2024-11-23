@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 1 - Quem é o cantor?</title>
+    <link rel="stylesheet" href="css/fase1.css">
+</head>
+<body>
+    <div id="fase1">
+        <h1>Fase 1: Quem é o cantor?</h1>
+        <p>Ouça o trecho da música e descubra o cantor!</p>
+
+        <div id="music-1" class="music">
+            <h2>Música 1</h2>
+            <button onclick="playMusic(1)">Tocar Música</button>
+            <audio id="audio-1" src="dynamic/music1.mp3"></audio>
+            <input type="text" id="answer-1" placeholder="Digite o cantor">
+            <button onclick="checkAnswer(1)">Enviar Resposta</button>
+            <p id="feedback-1"></p>
+        </div>
+
+        <div id="music-2" class="music hidden">
+            <h2>Música 2</h2>
+            <button onclick="playMusic(2)">Tocar Música</button>
+            <audio id="audio-2" src="dynamic/music2.mp3"></audio>
+            <input type="text" id="answer-2" placeholder="Digite o cantor">
+            <button onclick="checkAnswer(2)">Enviar Resposta</button>
+            <p id="feedback-2"></p>
+        </div>
+
+        <div id="music-3" class="music hidden">
+            <h2>Música 3</h2>
+            <button onclick="playMusic(3)">Tocar Música</button>
+            <audio id="audio-3" src="dynamic/music3.mp3"></audio>
+            <input type="text" id="answer-3" placeholder="Digite o cantor">
+            <button onclick="checkAnswer(3)">Enviar Resposta</button>
+            <p id="feedback-3"></p>
+        </div>
+        <div id="music-4" class="music hidden">
+            <h2>Música 4</h2>
+            <button onclick="playMusic(4)">Tocar Música</button>
+            <audio id="audio-4" src="dynamic/music4.mp3"></audio>
+            <input type="text" id="answer-4" placeholder="Digite o cantor">
+            <button onclick="checkAnswer(4)">Enviar Resposta</button>
+            <p id="feedback-4"></p>
+        </div>
+    </div>
+
+    <script src="script/fase1.js"></script>
+</body>
+</html>

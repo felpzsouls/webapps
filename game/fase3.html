@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Forca</title>
+    <link rel="stylesheet" href="css/fase3.css">
+</head>
+<body>
+    <div class="jogo-forca">
+        <h2>Jogo de Forca</h2>
+        <p id="palavra-display">_ _ _ _ _</p>
+        <p id="tentativas">Tentativas: 6</p>
+        <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+        <button onclick="adivinharLetra()">Adivinhar</button>
+        <p id="letras-usadas">Letras usadas: </p>
+        <p id="mensagem"></p>
+        <button id="proxima-palavra" onclick="proximaPalavra()" style="display:none;">Próxima Palavra</button>
+    </div>
+
+    <script src="script/fase3.js"></script>
+</body>
+</html>

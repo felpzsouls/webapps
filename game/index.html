@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta Especial</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Bem-vinda ao jogo!</h1>
+        <p>Complete todas as fases para desbloquear uma surpresa especial.</p>
+        <button onclick="startGame()">Iniciar Jogo</button>
+        <br><br>
+        <button onclick="enterFinalMessage()">Escrever Mensagem Final</button>
+    </div>
+    <script>
+        function startGame() {
+            window.location.href = "fase1.html"; // Redireciona para a primeira fase
+        }
+        function enterFinalMessage() {
+            window.location.href = "finalMessage.html"; // Redireciona para a página de mensagem final
+        }
+    </script>
+</body>
+</html>
