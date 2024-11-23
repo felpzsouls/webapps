@@ -56,4 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const keyPressed = event.key.toLowerCase();
         processInput(keyPressed);
     });
+
+    // Criar o teclado virtual
+    const keyboardContainer = document.getElementById("keyboard");
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split('');
+    
+    alphabet.forEach(letter => {
+        const button = document.createElement("button");
+        button.textContent = letter.toUpperCase();
+        button.addEventListener("click", () => {
+            processInput(letter);
+        });
+        keyboardContainer.appendChild(button);
+    });
 });
