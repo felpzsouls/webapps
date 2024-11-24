@@ -1,3 +1,4 @@
+/* Estilos para o corpo */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -9,6 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 #menu {
@@ -16,6 +19,8 @@ body {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Garantir que o menu tenha um tamanho máximo */
 }
 
 h1 {
@@ -31,6 +36,8 @@ p {
 #wordDisplay {
     font-size: 2rem;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 #wordDisplay span {
@@ -38,6 +45,7 @@ p {
     width: 20px;
     margin: 0 5px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 #wordDisplay span.space {
@@ -56,6 +64,7 @@ p {
     grid-gap: 5px;
     margin-top: 20px;
     justify-items: center;
+    width: 100%;
 }
 
 button {
@@ -66,6 +75,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 40px; /* Definir largura fixa para botões */
+    height: 40px; /* Definir altura fixa para botões */
 }
 
 button:hover {
@@ -79,4 +90,52 @@ button:active {
 #messageOutput {
     font-size: 1.2rem;
     color: green;
+    margin-top: 20px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    #menu {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #wordDisplay {
+        font-size: 1.5rem;
+    }
+
+    #keyboard {
+        grid-template-columns: repeat(7, 1fr); /* Menos colunas para telas menores */
+    }
+
+    button {
+        width: 30px; /* Reduzir tamanho dos botões */
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #keyboard {
+        grid-template-columns: repeat(6, 1fr); /* Mais compacto ainda em telas muito pequenas */
+    }
+
+    button {
+        width: 28px; /* Diminuir mais o tamanho dos botões */
+        height: 28px;
+    }
+
+    #wordDisplay {
+        font-size: 1.2rem;
+    }
+
+    #messageOutput {
+        font-size: 1rem;
+    }
 }
