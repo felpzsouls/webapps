@@ -38,6 +38,7 @@ p {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #wordDisplay span {
@@ -59,15 +60,17 @@ p {
 }
 
 #keyboard {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que as teclas "quebrem" para a próxima linha */
+    justify-content: center;
+    gap: 5px;
     margin-top: 20px;
-    justify-items: center;
-    width: 100%;
+    width: 100%; /* Garantir que o teclado ocupe toda a largura */
 }
 
 button {
+    flex: 1 0 calc(10% - 10px); /* Cada botão ocupa 10% da linha menos espaço do gap */
+    max-width: 50px; /* Limitar o tamanho máximo para botões */
     padding: 15px;
     font-size: 1rem;
     background-color: #f3f4f6;
@@ -75,8 +78,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 40px; /* Definir largura fixa para botões */
-    height: 40px; /* Definir altura fixa para botões */
+    text-align: center;
 }
 
 button:hover {
@@ -111,24 +113,23 @@ button:active {
         font-size: 1.5rem;
     }
 
-    #keyboard {
-        grid-template-columns: repeat(7, 1fr); /* Menos colunas para telas menores */
-    }
-
     button {
-        width: 30px; /* Reduzir tamanho dos botões */
-        height: 30px;
+        flex: 1 0 calc(14% - 10px); /* Botões menores para telas médias */
+        max-width: 40px;
+        padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
     #keyboard {
-        grid-template-columns: repeat(6, 1fr); /* Mais compacto ainda em telas muito pequenas */
+        gap: 3px; /* Menos espaço entre os botões */
     }
 
     button {
-        width: 28px; /* Diminuir mais o tamanho dos botões */
-        height: 28px;
+        flex: 1 0 calc(16% - 6px); /* Botões menores e mais compactos */
+        max-width: 35px;
+        padding: 8px;
+        font-size: 0.8rem;
     }
 
     #wordDisplay {
