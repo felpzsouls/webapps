@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Adaptação para telas pequenas */
+    min-height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    overflow: hidden;
+    padding: 10px;
+    /* Para evitar elementos colados nas bordas em dispositivos pequenos */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Permite organização vertical */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s;
+    width: 100%;
+    /* Adaptação para telas menores */
+    max-width: 500px;
+}
+
+.coracao {
+    position: relative;
+    /* Base para o botão ficar alinhado */
+    width: 100px;
+    height: 100px;
+    background-color: #f74848;
+    transform: rotate(45deg);
+    animation: batidao 1.4s linear infinite;
+}
+
+.coracao::before,
+.coracao::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f74848;
+    border-radius: 50%;
+}
+
+.coracao::before {
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.coracao::after {
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.counter {
+    display: none;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes batidao {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    30% {
+        transform: rotate(45deg) scale(1.4);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(45deg) scale(1.4);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+.button {
+    position: absolute;
+    /* Fixa o botão */
+    top: 30%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o centro */
+    background-color: white;
+    color: red;
+    font-size: 18px;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: pink;
+}
+
+
+
+.button:hover {
+    background-color: pink;
+}
+
+.hidden {
+    transform: scale(5);
+    opacity: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    /* Ajuste para telas menores */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+    /* Quebra de texto para telas pequenas */
+}
+
+.contador {
+    font-size: 1.5rem;
+    /* Tamanho dinâmico */
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -45px;
+    /* Ajuste para espaçamento */
+}
+
+.gif {
+    max-width: 100%;
+    /* Responsivo */
+    height: auto;
+}
+
+.toast {
+    visibility: hidden;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    background-color: #4caf50;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Adicionado para sumir para a direita */
+    opacity: 1;
+    /* Inicialmente visível */
+}
+
+.music-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.music-section h2 {
+    color: #b00060;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 360px;
+    height: 152px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.spotify-btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.spotify-btn:hover {
+    background-color: #17a74a;
+}
+
+.toast.show {
+    visibility: visible;
+    transform: translateX(0);
+    /* Posição inicial */
+    opacity: 1;
+    /* Totalmente visível */
+}
+
+.toast.hide {
+    transform: translateX(100%);
+    /* Move para fora da tela pela direita */
+    opacity: 0;
+    /* Gradualmente desaparece */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: #ffffff;
+    width: 100%;
+    transition: width 3.5s linear;
+    /* Duração sincronizada com o toast */
+}
+
+@keyframes shrink {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+
+/* Média para dispositivos móveis */
+@media (max-width: 768px) {
+    .coracao {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .contador {
+        font-size: 1.2rem;
+    }
+}
