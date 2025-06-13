@@ -13,7 +13,7 @@
 <body>
     <div class="container" id="intro">
         <div class="coracao"></div>
-        <button class="button" onclick="startCounter()">Clique</button>
+        <button class="button" onclick="startCounter()" >Clique</button>
     </div>
     <div class="counter" id="counter">
         <h1>Luis ❤ Laressa</h1>
@@ -22,12 +22,22 @@
             <img onclick="showToast()" src="pato.gif" alt="Pato andando" class="gif">
         </div>
         <div class="contador" id="contador"></div>
+        <div class="music-section">
+            <h2>Essa música me lembra você 💖</h2>
+            <iframe id="player"
+                src="https://open.spotify.com/embed/track/1QD3t3zkwFUdEbMBTApeiZ?utm_source=generator&theme=0"
+                frameborder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <button class="spotify-btn" onclick="proximaMusica()">Próxima Música 🎵</button>
+        </div>
     </div>
 
     <div id="toast" class="toast">
         <span>Te amarei Patoda vida!</span>
         <div class="progress-bar"></div>
     </div>
-    
+
 </body>
+
 </html>

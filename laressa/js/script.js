@@ -1,4 +1,5 @@
 function startCounter() {
+    
     document.getElementById('intro').classList.add('hidden');
     setTimeout(() => {
         document.getElementById('intro').style.display = 'none';
@@ -49,7 +50,7 @@ function atualizarContador() {
 
     let resultado = "";
     if (anos > 0) resultado += `${anos} ano${anos > 1 ? 's' : ''} `;
-    if (meses > 0) resultado += `${meses} mês${meses > 1 ? 'es' : ''} `;
+    if (meses > 0) resultado += `${meses} m${meses > 1 ? 'eses' : 'ês'} `;
     if (dias > 0) resultado += `${dias} dia${dias > 1 ? 's' : ''} `;
     if (horas > 0) resultado += `${horas} hora${horas > 1 ? 's' : ''} `;
     if (minutos > 0) resultado += `${minutos} minuto${minutos > 1 ? 's' : ''} `;
@@ -92,6 +93,20 @@ function showToast() {
         toast.classList.remove("show");
     }, 4000);
 }
+
+const musicas = [
+      "1QD3t3zkwFUdEbMBTApeiZ", // Exemplo 1
+      "4irM0ZydWatEXDDC7SflXS", // Exemplo 2
+      "4SfD9mJ8qJtjpiZjZs37DA"  // Exemplo 3
+    ];
+
+    let index = 0;
+
+    function proximaMusica() {
+      index = (index + 1) % musicas.length;
+      const player = document.getElementById('player');
+      player.src = `https://open.spotify.com/embed/track/${musicas[index]}?utm_source=generator&theme=0`;
+    }
 
 setInterval(atualizarContador, 1000);
 atualizarContador();
